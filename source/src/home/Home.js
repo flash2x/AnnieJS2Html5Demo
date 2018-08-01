@@ -10,12 +10,12 @@ home.Home=function(){
     s.classList.push({name: "annie.Shape", scene: "shapeColor",classObj:"shapeColor.ShapeColor",title:"矢量示例",isMake:false});
     s.classList.push({name: "annie.Input", scene: "input",classObj:"input.Input",title:"输入文本示例"});
     s.classList.push({name: "annie.FloatDisplay", scene: "saveImg",classObj:"saveImg.SaveImg",title:"配合Html标签示例",isMake:false});
-    s.classList.push({name: "annie.MovieClip", scene: "movieClip",classObj:"movieClip.MovieClip",title:"动画示例",isMake:false});
+    s.classList.push({name: "annie.MovieClip", scene: "movieClip",classObj:"movieClip.MovieClip",title:"动画示例",isMake:true});
     s.classList.push({name: "stage.MultiTouch", scene: "multTouch",classObj:"multTouch.MultTouch",title:"多点手势示例",isMake:false});
     s.classList.push({name: "stage.Sound", scene: "sound",classObj:"sound.Sound",title:"音乐播放示例",isMake:false});
     s.classList.push({name: "annieUI.FacePhoto", scene: "facePhoto",classObj:"facePhoto.FacePhoto",title:"加载头像示例",isMake:false});
     s.classList.push({name: "annieUI.FlipBook", scene: "flipBook",classObj:"flipBook.FlipBook",title:"电子杂志示例",isMake:false});
-    s.classList.push({name: "annieUI.DrawingBoard", scene: "drawingBoard",classObj:"drawingBoard.DrawingBoard",title:"画板示例",isMake:false});
+    s.classList.push({name: "annieUI.DrawingBoard", scene: "drawingBoard",classObj:"drawingBoard.DrawingBoard",title:"画板示例",isMake:true});
     s.classList.push({name: "annieUI.ScratchCard", scene: "scratchCard",classObj:"scratchCard.ScratchCard",title:"刮刮卡示例",isMake:false});
     s.classList.push({name: "annieUI.ScrollList", scene: "scrollList",classObj:"scrollList.ScrollList",title:"滚动列表示例",isMake:true});
     s.classList.push({name: "annieUI.ScrollPage", scene: "scrollPage",classObj:"scrollPage.ScrollPage",title:"长页滚动示例",isMake:true});
