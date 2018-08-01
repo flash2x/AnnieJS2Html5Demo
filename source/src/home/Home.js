@@ -18,7 +18,7 @@ home.Home=function(){
     s.classList.push({name: "annieUI.DrawingBoard", scene: "drawingBoard",classObj:"drawingBoard.DrawingBoard",title:"画板示例",isMake:false});
     s.classList.push({name: "annieUI.ScratchCard", scene: "scratchCard",classObj:"scratchCard.ScratchCard",title:"刮刮卡示例",isMake:false});
     s.classList.push({name: "annieUI.ScrollList", scene: "scrollList",classObj:"scrollList.ScrollList",title:"滚动列表示例",isMake:true});
-    s.classList.push({name: "annieUI.ScrollPage", scene: "scrollPage",classObj:"scrollPage.ScrollPage",title:"长页滚动示例",isMake:false});
+    s.classList.push({name: "annieUI.ScrollPage", scene: "scrollPage",classObj:"scrollPage.ScrollPage",title:"长页滚动示例",isMake:true});
     s.classList.push({name: "annieUI.SlidePage", scene: "slidePage",classObj:"slidePage.SlidePage",title:"滑动翻页示例",isMake:false});
     s.addEventListener(annie.MouseEvent.CLICK, function (e) {
         if(!e.target.title_txt)return;
