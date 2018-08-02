@@ -55,7 +55,7 @@ window.addEventListener("load",function(){
                             loadObj.per_txt.text=progress+"%";
                         },function (e) {
                             //remove Loading
-                            // stage.removeAllChildren();
+                            stage.removeAllChildren();
                             stage.addChild(annie.Eval("new "+ge.data.classObj));
                             stage.addChild(titleMc);
                             stage.addChild(backBtn);
