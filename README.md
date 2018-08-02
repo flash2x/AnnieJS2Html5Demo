@@ -1,2 +1,2 @@
-# Annie2xDemo
-Annie2x 4.x结合AnnieJS2.x的Demo示例
+# AnnieJS2Html5Demo
+Annie2x 4.x结合AnnieJS2.x 制作的Html5Demo
