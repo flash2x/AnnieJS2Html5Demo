@@ -13,7 +13,7 @@ window.addEventListener("load",function(){
      * 缩放模式
      * 渲染模式
      */
-    var stage=new annie.Stage("annieEngine",640,1040,24,annie.StageScaleMode.FIXED_HEIGHT,0);
+    var stage=new annie.Stage("annieEngine",640,1040,30,annie.StageScaleMode.FIXED_HEIGHT,0);
     //默认关闭自动旋转和自动resize
     stage.autoResize=true;
     stage.autoSteering=true;

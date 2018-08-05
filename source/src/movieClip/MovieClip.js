@@ -65,5 +65,6 @@ movieClip.MovieClip=function(){
             setTip("触发当前事件时，当前帧为" + s.monkey_mc.currentFrame);
         }
     });
+
 };
 A2xExtend(movieClip.MovieClip,annie.Sprite);
