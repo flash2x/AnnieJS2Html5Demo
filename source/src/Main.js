@@ -15,8 +15,8 @@ window.addEventListener("load",function(){
      */
     var stage=new annie.Stage("annieEngine",640,1040,30,annie.StageScaleMode.FIXED_HEIGHT,0);
     //默认关闭自动旋转和自动resize
-    stage.autoResize=true;
-    stage.autoSteering=true;
+    // stage.autoResize=true;
+    // stage.autoSteering=true;
     stage.addEventListener(annie.Event.ON_INIT_STAGE,function (e) {
     	//想要同时加载多个场景的话，Annie2x.loadScene的第一个参数可以传数组如 ["scene1","scene2",...]
         annie.loadScene(["loading","home"],function(per){
