@@ -6,7 +6,7 @@ scrollList.ScrollList=function(){
 	annie.initRes(s,"scrollList","ScrollList");
     s.dataCount=0;
     //生成2行的数据，当然你也可以生成其他行的
-    var sl=new annieUI.ScrollList(scrollList.Item,300,50,600,300,true,2);
+    var sl=new annieUI.ScrollList(scrollList.Item,300,50,600,300,false,2);
     s.addChild(sl);
     sl.y=120;
     sl.updateData(s.getData());
@@ -26,8 +26,7 @@ scrollList.ScrollList=function(){
     });
 };
 A2xExtend(scrollList.ScrollList,annie.Sprite);
-
-scrollList.ScrollList.prototype.getData=function () {
+scrollList.ScrollList.prototype.getData=function(){
     var s=this;
     var dataList=[];
     for(var i=0;i<30;i++){
