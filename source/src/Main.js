@@ -4,6 +4,7 @@
 window.A2xExtend=__extends;
 window.addEventListener("load",function(){
     annie.debug=true;
+
     /**
      * 因为这是个文件是入口文件,加载时间越短越好,那么就需要这个文件里代码量越少越好，尽量在其他文件写项目逻辑
      * 装载引擎的Canvas的div的id,可以在一个页面同时放多个stage.
@@ -66,7 +67,6 @@ window.addEventListener("load",function(){
                     stage.removeAllChildren();
                     stage.addChild(homeObj);
                 })
-
             }
         });
     })
