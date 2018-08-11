@@ -6,6 +6,7 @@ home.Home=function(){
 	annie.initRes(s,"home","Home");
     s.classList = [];
     s.classList.push({name: "drag", scene: "drag",classObj:"drag.Drag",title:"鼠标拖动",isMake:true});
+    s.classList.push({name: "截图", scene: "cut",classObj:"cut.Cut",title:"显示对象截图",isMake:true});
     s.classList.push({name: "annie.URLLoader", scene: "urlLoader",classObj:"urlLoader.UrlLoader",title:"加载示例",isMake:true});
     s.classList.push({name: "annie.Shape", scene: "shape",classObj:"shape.Shape",title:"矢量示例",isMake:true});
     s.classList.push({name: "annie.Input", scene: "input",classObj:"input.Input",title:"输入文本示例",isMake:true});

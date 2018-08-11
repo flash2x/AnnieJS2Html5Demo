@@ -1006,14 +1006,6 @@ declare namespace annie {
          * @public
          */
         constructor();
-        /**
-         * 更新信息对象
-         * @property _UI
-         * @param UM 是否更新矩阵 UA 是否更新Alpha UF 是否更新滤镜
-         * @since 1.0.0
-         * @protected
-         * @readonly
-         */
         protected _UI: {
             UD: boolean;
             UM: boolean;
@@ -1040,23 +1032,7 @@ declare namespace annie {
          * @readonly
          */
         parent: Sprite;
-        /**
-         * 显示对象在显示列表上的最终表现出来的透明度,此透明度会继承父级的透明度依次相乘得到最终的值
-         * @property cAlpha
-         * @protected
-         * @type {number}
-         * @since 1.0.0
-         * @default 1
-         */
         protected cAlpha: number;
-        /**
-         * 显示对象上对显示列表上的最终合成的矩阵,此矩阵会继承父级的显示属性依次相乘得到最终的值
-         * @property cMatrix
-         * @protected
-         * @type {annie.Matrix}
-         * @default null
-         * @since 1.0.0
-         */
         protected cMatrix: Matrix;
         /**
          * 是否可以接受点击事件,如果设置为false,此显示对象将无法接收到点击事件
@@ -1067,15 +1043,6 @@ declare namespace annie {
          * @default false
          */
         mouseEnable: boolean;
-        /**
-         * <h4><font color="red">小游戏不支持 小程序不支持</font></h4>
-         * 显示对象上对显示列表上的最终的所有滤镜组
-         * @property cFilters
-         * @protected
-         * @default []
-         * @since 1.0.0
-         * @type {Array}
-         */
         protected cFilters: any;
         /**
          * 每一个显示对象都可以给他启一个名字,这样我们在查找子级的时候就可以直接用this.getChildrndByName("name")获取到这个对象的引用
@@ -1357,30 +1324,8 @@ declare namespace annie {
             height: number;
         };
         static _canvas: any;
-        /**
-         * 缓存起来的纹理对象。最后真正送到渲染器去渲染的对象
-         * @property _texture
-         * @protected
-         * @since 1.0.0
-         * @type {any}
-         * @default null
-         */
         protected _texture: any;
-        /**
-         * @property _offsetX
-         * @protected
-         * @since 1.0.0
-         * @type {number}
-         * @default 0
-         */
         protected _offsetX: number;
-        /**
-         * @property _offsetY
-         * @protected
-         * @since 1.0.0
-         * @type {number}
-         * @default 0
-         */
         protected _offsetY: number;
         protected _bounds: Rectangle;
         protected _drawRect: Rectangle;
@@ -1390,12 +1335,14 @@ declare namespace annie {
          * @method stopAllSounds
          * @public
          * @since 2.0.0
+         * @return {void}
          */
         stopAllSounds(): void;
         /**
          * @method getSound
          * @param {number|string} id
          * @return {Array} 这个对象里所有叫这个名字的声音引用数组
+         * @since 2.0.0
          */
         getSound(id: any): any;
         /**
@@ -1428,12 +1375,6 @@ declare namespace annie {
         removeSound(id: number | string): void;
         private _a2x_res_obj;
         destroy(): void;
-        /**
-         * 更新流程走完之后再执行脚本和事件执行流程
-         * @protected
-         * @method callEventAndFrameScript
-         * @param {number} callState 0是上级被移除，执行removeStage事件 1是上级被添加到舞台执行addStage事件 2是常规刷新运行
-         */
         protected callEventAndFrameScript(callState: number): void;
     }
 }
@@ -1453,6 +1394,7 @@ declare namespace annie {
         private _bitmapData;
         private _realCacheImg;
         /**
+         * <h4><font color="red">小游戏不支持 小程序不支持</font></h4>
          * 有时候一张贴图图，我们只需要显示他的部分。其他不显示,对你可能猜到了
          * SpriteSheet就用到了这个属性。默认为null表示全尺寸显示bitmapData需要显示的范围
          * @property rect
@@ -1469,8 +1411,8 @@ declare namespace annie {
          * @method Bitmap
          * @since 1.0.0
          * @public
-         * @param {Image|Video|other} bitmapData 一个HTMl Image的实例
-         * @param {annie.Rectangle} rect 设置显示Image的区域,不设置些值则全部显示Image的内容
+         * @param {Image|Video|other} bitmapData 一个HTMl Image的实例,小程序或者小游戏里则只能是一个图片的地址
+         * @param {annie.Rectangle} rect 设置显示Image的区域,不设置些值则全部显示Image的内容，小程序或者小游戏里没有这个参数
          * @example
          *      //html5
          *      var imgEle=new Image();
@@ -1488,6 +1430,10 @@ declare namespace annie {
          *          s.addChild(rectBitmap);
          *      }
          *      imgEle.src='http://test.annie2x.com/test.jpg';
+         *      //小程序或者小游戏
+         *      var imgEle="http://test.annie2x.com/test.jpg";
+         *      var bitmap=new annie.Bitmap(imgEle);
+         *      s.addChild(bitmap);
          *
          * <p><a href="http://test.annie2x.com/annie/Bitmap/index.html" target="_blank">测试链接</a></p>
          */
@@ -1553,7 +1499,7 @@ declare namespace annie {
         private _command;
         /**
          * 通过一系统参数获取生成颜色或渐变所需要的对象
-         * 一般给用户使用较少,Flash2x工具自动使用
+         * 一般给用户使用较少,Annie2x工具自动使用
          * @method getGradientColor
          * @static
          * @param points
@@ -1564,7 +1510,7 @@ declare namespace annie {
          */
         static getGradientColor(points: any, colors: any): any;
         /**
-         * 设置位图填充时需要使用的方法,一般给用户使用较少,Flash2x工具自动使用
+         * 设置位图填充时需要使用的方法,一般给用户使用较少,Annie2x工具自动使用
          * @method getBitmapStyle
          * @static
          * @param {Image} image HTML Image元素
@@ -1753,7 +1699,7 @@ declare namespace annie {
          */
         beginFill(color: string): void;
         /**
-         * 线性渐变填充 一般给Flash2x用
+         * 线性渐变填充 一般给Annie2x用
          * @method beginLinearGradientFill
          * @param {Array} points 一组点
          * @param {Array} colors 一组颜色值
@@ -1763,7 +1709,7 @@ declare namespace annie {
          */
         beginLinearGradientFill(points: any, colors: any): void;
         /**
-         * 径向渐变填充 一般给Flash2x用
+         * 径向渐变填充 一般给Annie2x用
          * @method beginRadialGradientFill
          * @param {Array} points 一组点
          * @param {Array} colors 一组颜色值
@@ -1774,7 +1720,7 @@ declare namespace annie {
          */
         beginRadialGradientFill: (points: any, colors: any) => void;
         /**
-         * 位图填充 一般给Flash2x用
+         * 位图填充 一般给Annie2x用
          * @method beginBitmapFill
          * @param {Image} image
          * @param { Array} matrix
@@ -1800,7 +1746,7 @@ declare namespace annie {
         private static _caps;
         private static _joins;
         /**
-         * 画线性渐变的线条 一般给Flash2x用
+         * 画线性渐变的线条 一般给Annie2x用
          * @method beginLinearGradientStroke
          * @param {Array} points 一组点
          * @param {Array} colors 一组颜色值
@@ -1814,7 +1760,7 @@ declare namespace annie {
          */
         beginLinearGradientStroke(points: Array<number>, colors: any, lineWidth?: number, cap?: number, join?: number, miter?: number): void;
         /**
-         * 画径向渐变的线条 一般给Flash2x用
+         * 画径向渐变的线条 一般给Annie2x用
          * @method beginRadialGradientStroke
          * @param {Array} points 一组点
          * @param {Array} colors 一组颜色值
@@ -1828,7 +1774,7 @@ declare namespace annie {
          */
         beginRadialGradientStroke: (points: number[], colors: any, lineWidth?: number, cap?: number, join?: number, miter?: number) => void;
         /**
-         * 线条位图填充 一般给Flash2x用
+         * 线条位图填充 一般给Annie2x用
          * @method beginBitmapStroke
          * @param {Image} image
          * @param {Array} matrix
@@ -1859,7 +1805,7 @@ declare namespace annie {
          */
         endStroke(): void;
         /**
-         * 解析一段路径 一般给Flash2x用
+         * 解析一段路径 一般给Annie2x用
          * @method decodePath
          * @param {Array} data
          * @public
@@ -2466,18 +2412,7 @@ declare namespace annie {
          * @param {HtmlElement} htmlElement 需要封装起来的html元素的引用。你可以通过这个引用来调用或设置此元素自身的属性方法和事件,甚至是样式
          */
         init(htmlElement: any): void;
-        /**
-         * @method getStyle
-         * @param {HTMLElement} elem
-         * @param cssName
-         * @return {any}
-         */
         private getStyle(elem, cssName);
-        /**
-         * @method updateStyle
-         * @public
-         * @since 1.1.4
-         */
         updateStyle(): void;
         destroy(): void;
     }
