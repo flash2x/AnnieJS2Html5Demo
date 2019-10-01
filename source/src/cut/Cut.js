@@ -6,12 +6,7 @@ cut.Cut=function(){
 	annie.initRes(s,"cut","Cut");
 	s.cut_btn.mouseChildren=false;
 	s.cut_btn.addEventListener(annie.MouseEvent.CLICK,function () {
-        var imageDate=annie.toDisplayDataURL(s.monkey_mc, {
-            x: 0,
-            y: 0,
-            width:s.monkey_mc.width,
-            height: s.monkey_mc.height
-        }, {
+        var imageDate=annie.toDisplayDataURL(s.monkey_mc,null, {
             type: "jpeg",
             quality:80
         }, '#CDDBEB');
@@ -19,9 +14,9 @@ cut.Cut=function(){
         image.src=imageDate;
 		var f=new annie.FloatDisplay();
 		f.init(image);
-		s.addChild(f);
 		f.x=Math.random()*s.stage.viewRect.width>>1;
 		f.y=Math.random()*s.stage.viewRect.height>>1;
+        s.addChild(f);
     })
 };
 A2xExtend(cut.Cut,annie.Sprite);

@@ -10,6 +10,7 @@ scrollPage.ScrollPage=function(){
         var p=new pageList[i];
         p.y=i*1040;
         sp.view.addChild(p);
+        sp.isSpringBack=false;
     }
     sp.maxDistance=1040*pageList.length;
     s.addChildAt(sp,0);

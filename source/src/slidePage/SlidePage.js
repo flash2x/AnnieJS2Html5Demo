@@ -6,7 +6,7 @@ slidePage.SlidePage=function(){
 	annie.initRes(s,"slidePage","SlidePage");
     var arrow=new slidePage.Arrow();
     arrow.mouseEnable=false;
-    var sp=new annieUI.SlidePage(640,1040);
+    var sp=new annieUI.SlidePage(320,640);
     sp.isPageFollowToMove=true;
     sp.reBound=0.3;
     // sp.canSlideNext=false;

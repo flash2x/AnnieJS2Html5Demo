@@ -13,6 +13,9 @@ drag.Drag=function(){
         // s.test_mc.startDrag(true,new annie.Rectangle(100,100,300,300));
         // 不固定中心点到鼠标并拖动范围
         // s.test_mc.startDrag(false,new annie.Rectangle(100,100,300,300));
+    });
+    s.addEventListener(annie.Event.REMOVE_TO_STAGE,function (e) {
+        s.test_mc.stopDrag();
     })
 };
 A2xExtend(drag.Drag,annie.Sprite);
