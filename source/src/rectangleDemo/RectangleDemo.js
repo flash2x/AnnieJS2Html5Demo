@@ -1,9 +1,14 @@
+/**
+ * annie.Rectangle
+ * 矩形类
+ */
 AnnieRoot.rectangleDemo=AnnieRoot.rectangleDemo||{};
 rectangleDemo.RectangleDemo=function(){
 	var s = this;
 	annie.Sprite.call(s);
 	/*_a2x_need_start*/s.pointCount=null;s.showBox=null;/*_a2x_need_end*/
 	annie.initRes(s,"rectangleDemo","RectangleDemo");
+	//上面的代码Annie2x工具自动生成的，我们不要管他，也不要在它的上面去写代码，除非你看明白了Annie引擎的构造
 	var rect1 = null;
 	var shape1;
 	var shape2;
@@ -31,6 +36,6 @@ rectangleDemo.RectangleDemo=function(){
 	s.pointCount.addEventListener(annie.MouseEvent.CLICK,function (e) {
 		console.log("两个矩形是否相交：（true为相交，false为不相交）",annie.Rectangle.testRectCross(shape1,shape2));
 	})
-	
+
 };
 A2xExtend(rectangleDemo.RectangleDemo,annie.Sprite);

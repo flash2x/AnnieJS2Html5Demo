@@ -1,10 +1,17 @@
+/**
+ * annie.Sound
+ * 声音类,需要通过代码控制音乐的，可以使用这个
+ * 下面这个是示范，这个可能会有较少可能性，让音乐播放时，播放不了。
+ * 所以我们一般音乐我们一般建议是放在fla的库里面，并绑定一个类，通过类去获取音乐，进行控制.
+ */
 AnnieRoot.soundDemo=AnnieRoot.soundDemo||{};
 soundDemo.SoundDemo=function(){
 	var s = this;
 	annie.Sprite.call(s);
 	/*_a2x_need_start*/s.playBtn=null;s.playSecondBtn=null;/*_a2x_need_end*/
 	annie.initRes(s,"soundDemo","SoundDemo");
-	//在ADD_TO_STAGE事件外定义变量为了避免每次进入页面都要var一次，浪费性能
+	//上面的代码Annie2x工具自动生成的，我们不要管他，也不要在它的上面去写代码，除非你看明白了Annie引擎的构造
+    //在ADD_TO_STAGE事件外定义变量为了避免每次进入页面都要var一次，浪费性能
 	var soundPlayer1 = null;
 	var soundPlayer2 = null;
 	//判断两个按钮当前的状态，以此做出按钮提示文字和音乐播放与暂停的变化

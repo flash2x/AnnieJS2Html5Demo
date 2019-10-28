@@ -1,9 +1,14 @@
+/**
+ * annie.Tween
+ * 全局静态单列类,不要实例化此类
+ */
 AnnieRoot.tweenDemo=AnnieRoot.tweenDemo||{};
 tweenDemo.TweenDemo=function(){
 	var s = this;
 	annie.Sprite.call(s);
 	/*_a2x_need_start*/s.Rotate=null;s.UsebackInOut=null;s.Useloop=null;s.Useyoyo=null;s.ball=null;s.bigger=null;s.miss=null;s.move_x=null;s.move_y=null;/*_a2x_need_end*/
 	annie.initRes(s,"tweenDemo","TweenDemo");
+	//上面的代码Annie2x工具自动生成的，我们不要管他，也不要在它的上面去写代码，除非你看明白了Annie引擎的构造
 	if (!s.gTimer) {
 		s.gTimer = new annie.Timer(100, 1);
 		s.gTimer.addEventListener(annie.Event.TIMER, s.gt = function (e) {

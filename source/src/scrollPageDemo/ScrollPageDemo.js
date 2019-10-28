@@ -24,9 +24,8 @@ scrollPageDemo.ScrollPageDemo=function(){
 	sp.maxDistance=1040*pageList.length;
 	//将组件添加到舞台
 	s.addChildAt(sp,0);
-	//如果需要重新设置宽高,需要将滑动方向重新设置一遍，如果不需要重新设置，就不用写下面两句代码.
-	sp.setViewRect(640,1040);
-	sp.isVertical=false;
+	//如果需要重新设置宽高,需要将滑动方向重新设置一遍，如果不需要重新设置，就不用写下面代码.
+	sp.setViewRect(640,1040,true);
 	//这里是滑动到指定的距离；
 	sp.scrollTo(20);
 	sp.addEventListener(annie.Event.ON_SCROLL_START,function (e) {

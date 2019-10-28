@@ -1,9 +1,15 @@
+/**
+ * annie.URLLoader
+ * 小游戏不支持 小程序不支持
+ * 资源加载类,后台请求,加载资源和后台交互都可以使用此类
+ */
 AnnieRoot.urlLoaderDemo=AnnieRoot.urlLoaderDemo||{};
 urlLoaderDemo.UrlLoaderDemo=function(){
 	var s = this;
 	annie.Sprite.call(s);
 	/*_a2x_need_start*/s.cssBtn=null;s.imageBtn=null;s.jsBtn=null;s.jsonBtn=null;s.textBtn=null;s.xmlBtn=null;/*_a2x_need_end*/
 	annie.initRes(s,"urlLoaderDemo","UrlLoaderDemo");
+	//上面的代码Annie2x工具自动生成的，我们不要管他，也不要在它的上面去写代码，除非你看明白了Annie引擎的构造
 	s.jsBtn.mouseChildren=false;
 	s.jsonBtn.mouseChildren=false;
 	s.imageBtn.mouseChildren=false;

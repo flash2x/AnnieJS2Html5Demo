@@ -14,16 +14,11 @@ flipBookDemo.FlipBookDemo=function(){
 	//上面的代码Annie2x工具自动生成的，我们不要管他，也不要在它的上面去写代码，除非你看明白了Annie引擎的构造
 	//首先将翻页组件new出来
 	//页面的对象提前进行new出来，避免资源过多加载
-	var page1=new flipBookDemo.OnePage();
-	var page2=new flipBookDemo.TwoPage();
+	var pageList=[new flipBookDemo.OnePage(),new flipBookDemo.TwoPage(),new flipBookDemo.OnePage(),new flipBookDemo.TwoPage(),new flipBookDemo.OnePage(),new flipBookDemo.TwoPage(),new flipBookDemo.OnePage(),new flipBookDemo.TwoPage()]
 	var  fp=new annieUI.FlipBook(320,640,8,function (index) {
-		//通过此回调获取指定页的内容的显示对象
+		//通过此回调获取指定页的内容的显示对象,index是从1开始，所以这里需要减1；
 		var p=null;
-		if(index%2==0){
-			p=page1
-		}else{
-			p=page2;
-		}
+		p=pageList[index-1];
 		p.page_txt.text="第"+index+"页";
 		return p;
 	});

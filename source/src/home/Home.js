@@ -18,7 +18,7 @@ home.Home=function(){
     s.classList.push({name: "annie.MovieClip", scene: "movieClipDemo",classObj:"movieClipDemo.MovieClipDemo",title:"动画显示对象",isMake:true });
     s.classList.push({name: "annie.Stage", scene: "stageDemo",classObj:"stageDemo.StageDemo",title:"舞台显示对象",isMake:true});
     // s.classList.push({name: "annie.getStagePixels", scene: "getStagePixelsDemo",classObj:"getStagePixelsDemo.GetStagePixelsDemo",title:"获取舞台指定区域像素值",isMake:true});
-    s.classList.push({name: "annie.Event", scene: "eventDem4o",classObj:"eventDemo.EventDemo",title:"事件类",isMake:true});
+    s.classList.push({name: "annie.Event", scene: "eventDemo",classObj:"eventDemo.EventDemo",title:"事件类",isMake:true});
     s.classList.push({name: "annie.MouseEvent", scene: "mouseEventDemo",classObj:"mouseEventDemo.MouseEventDemo",title:"鼠标(触摸)事件",isMake:true});
     s.classList.push({name: "annie.TouchEvent", scene: "touchEventDemo",classObj:"touchEventDemo.TouchEventDemo",title:"多点触摸事件",isMake:true});
     s.classList.push({name: "annie.globalDispatcher", scene: "globalDispatcherDemo",classObj:"globalDispatcherDemo.GlobalDispatcherDemo",title:"单例事件触发器",isMake:true});
@@ -37,7 +37,7 @@ home.Home=function(){
     s.classList.push({name: "annie.getQueryString", scene: "getQueryStringDemo",classObj:"getQueryStringDemo.GetQueryStringDemo",title:"获取地址栏上的参数",isMake:true});
     s.classList.push({name: "annie.LoadScene", scene: "loadSceneDemo",classObj:"loadSceneDemo.LoadSceneDemo",title:"加载场景",isMake:true});
     s.classList.push({name: "annie.isLoadedScene", scene: "isLoadedSceneDemo",classObj:"isLoadedSceneDemo.IsLoadedSceneDemo",title:"判断场景是否加载完成",isMake:true});
-    s.classList.push({name: "annie.unLoadScene", scene: "unLoadSceneDemo",classObj:"unLoadSceneDemo.unLoadSceneDemo",title:"卸载加载过的场景",isMake:true});
+    s.classList.push({name: "annie.unLoadScene", scene: "unLoadSceneDemo",classObj:"unLoadSceneDemo.UnLoadSceneDemo",title:"卸载加载过的场景",isMake:true});
     s.classList.push({name: "annie.toDisplayDataURL", scene: "toDisplayDataURLDemo",classObj:"toDisplayDataURLDemo.ToDisplayDataURLDemo",title:"将显示对象截图",isMake:true});
     s.classList.push({name: "annie.osType", scene: "osTypeDemo",classObj:"osTypeDemo.OsTypeDemo",title:"判断系统类型",isMake:true});
     s.classList.push({name: "annieUI.ScrollPage", scene: "scrollPageDemo",classObj:"scrollPageDemo.ScrollPageDemo",title:"长页面组件",isMake:true});

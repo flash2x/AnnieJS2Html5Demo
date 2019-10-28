@@ -1,3 +1,7 @@
+/**
+ * annie.MovieClip
+ * annie引擎核心类
+ */
 AnnieRoot.movieClipDemo = AnnieRoot.movieClipDemo || {};
 movieClipDemo.MovieClipDemo = function () {
     var s = this;
@@ -12,7 +16,7 @@ movieClipDemo.MovieClipDemo = function () {
     s.stopBtn = null;
     s.testCaton = null;/*_a2x_need_end*/
     annie.initRes(s, "movieClipDemo", "MovieClipDemo");
-
+    //上面的代码Annie2x工具自动生成的，我们不要管他，也不要在它的上面去写代码，除非你看明白了Annie引擎的构造
     s.playBtn.addEventListener(annie.MouseEvent.CLICK, function (e) {
         //播放动画
         s.testCaton.play()

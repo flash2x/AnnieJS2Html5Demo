@@ -1,9 +1,14 @@
+/**
+ * annie.TouchEvent
+ * 多点触碰事件。单点事件请使用mouseEvent,pc和mobile通用
+ */
 AnnieRoot.touchEventDemo = AnnieRoot.touchEventDemo || {};
 touchEventDemo.TouchEventDemo = function () {
     var s = this;
     annie.Sprite.call(s);
     /*_a2x_need_start*/s.touchArea=null;/*_a2x_need_end*/
     annie.initRes(s, "touchEventDemo", "TouchEventDemo");
+    //上面的代码Annie2x工具自动生成的，我们不要管他，也不要在它的上面去写代码，除非你看明白了Annie引擎的构造
     s.addEventListener(annie.Event.ADD_TO_STAGE, function (e) {
         //打开多点触控功能
         s.stage.isMultiTouch = true;
