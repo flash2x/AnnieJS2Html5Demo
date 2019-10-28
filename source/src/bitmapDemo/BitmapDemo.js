@@ -68,7 +68,7 @@ bitmapDemo.BitmapDemo = function () {
                     image3 = new Image();
                     //这里有个细节就是设置了跨域
                     image3.crossOrigin = "anonymous";
-                    image3.src = "http://annie2x.com/static/logo.jpg";
+                    image3.src = "resource/logo.jpg";
                 }
                 initBitmap(image3);
                 break;
@@ -97,7 +97,7 @@ bitmapDemo.BitmapDemo = function () {
                     image5.width = 320;
                     image5.height = 176;
                     image5.autoplay = true;
-                    image5.src = "https://www.w3school.com.cn/example/html5/mov_bbb.mp4";
+                    image5.src = "resource/test.mp4";
                 }
                 initBitmap(image5);
                 break;

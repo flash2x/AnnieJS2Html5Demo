@@ -14,12 +14,12 @@ facePhotoDemo.FacePhotoDemo=function(){
 	annie.initRes(s,"facePhotoDemo","FacePhotoDemo");
 	//上面的代码Annie2x工具自动生成的，我们不要管他，也不要在它的上面去写代码，除非你看明白了Annie引擎的构造
 	var photo1=new annieUI.FacePhoto();
-	photo1.init("http://test2.annie2x.com/hero/userImage.jpg",200,200,0);
+	photo1.init("resource/userImage.jpg",200,200,0);
 	s.addChild(photo1);
 	photo1.x=220;
 	photo1.y=200;
 	var photo2=new annieUI.FacePhoto();
-	photo2.init("http://test2.annie2x.com/hero/userImage.jpg",200,200,1);
+	photo2.init("resource/userImage.jpg",200,200,1);
 	s.addChild(photo2);
 	photo2.x=220;
 	photo2.y=500;
