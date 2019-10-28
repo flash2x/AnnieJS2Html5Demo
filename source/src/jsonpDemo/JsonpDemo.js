@@ -18,13 +18,13 @@ jsonpDemo.JsonpDemo=function(){
 	s.addEventListener(annie.MouseEvent.CLICK,function (e) {
 		//在这里如果有两个以上的点击事件，我建议你可以选择switch,这样会显得代码不是很杂。
 		if(e.target.name=="getData_btn"){
-			annie.jsonp('messageUrl.js', 0, 'callback', function (result) {
+			annie.jsonp('resource/messageUrl.js', 0, 'callback', function (result) {
 				//初始化数据，是为了让你们能看到两种不同获取json数据的方式
 				initData();
 				sameFn(result,1);
 			})
 		}else{
-			annie.jsonp('messageFn.js', 1, 'callback', function (result) {
+			annie.jsonp('resource/messageFn.js', 1, 'callback', function (result) {
 				//初始化数据，是为了让你们能看到两种不同获取json数据的方式
 				initData();
 				sameFn(result,2);

@@ -43,7 +43,7 @@ ajaxDemo.AjaxDemo=function(){
 			    // 请求后端数据。正式打开下面url.
 			    // url: serverUrl + "Home/Getinfo/getPersonInfo",
 			    //请求本地json数据
-			    url: "./messageUrl.json",
+			    url: "resource/messageUrl.json",
 			    //data: {parameter: "你想传的数据"},//TODO  （这里TODO起强调作用）这里是前端向后端传送数据的参数，如果需要传送数据的话，请打开这个，在花括号内填写你传送的数据
 			    responseType: 'json',//TODO  （这里TODO起强调作用）这个参数是接收到后端传过来的数据时，解析的方式：text/json,一般不写这个话，默认的是：text
 			    success: function (result) {
