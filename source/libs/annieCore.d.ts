@@ -1292,12 +1292,12 @@ declare namespace annie {
         /**
          * 获取对象形变后外切矩形。
          * 可以从这个方法中读取到此显示对象变形后x方向上的宽和y方向上的高
-         * @method getTransformRect
+         * @method getDrawRect
          * @public
          * @since 1.0.0
          * @return {annie.Rectangle}
          */
-        getTransformRect(matrix?: annie.Matrix, bounds?: annie.Rectangle): void;
+        getDrawRect(matrix?: annie.Matrix, bounds?: annie.Rectangle): void;
         /**
          * 更新函数
          * @method update
@@ -1360,10 +1360,23 @@ declare namespace annie {
          * @return {void}
          */
         stopAllSounds(): void;
+        /**
+         * 渲染网格行数
+         * @property boundsRow
+         * @since 3.10
+         * @type {number}
+         */
         boundsRow: number;
+        /**
+         * 渲染网格列数
+         * @property boundsCol
+         * @since 3.10
+         * @type {number}
+         */
         boundsCol: number;
         /**
          * 更新boundsList矩阵
+         * @method _updateSplitBounds
          * @private
          */
         protected _updateSplitBounds(): void;
