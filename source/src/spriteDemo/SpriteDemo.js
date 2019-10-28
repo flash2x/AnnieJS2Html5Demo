@@ -1,9 +1,16 @@
+/**
+ * annie.Sprite
+ * 显示对象的容器类,可以将其他显示对象放入其中,是annie引擎的核心容器类. Sprite 类是基本显示列表构造块。
+ * 一个可显示图形并且也可包含子项的显示列表节点。 Sprite 对象与影片剪辑类似，但没有时间轴。
+ * Sprite 是不需要时间轴的对象的相应基类。 例如，Sprite 将是通常不使用时间轴的用户界面 (UI) 组件的逻辑基类
+ */
 AnnieRoot.spriteDemo = AnnieRoot.spriteDemo || {};
 spriteDemo.SpriteDemo = function () {
     var s = this;
     annie.Sprite.call(s);
     /*_a2x_need_start*/s.change_btn=null;s.cleanAll_btn=null;s.clean_btn=null;s.click_btn=null;s.testBox=null;/*_a2x_need_end*/
     annie.initRes(s, "spriteDemo", "SpriteDemo");
+    //上面的代码Annie2x工具自动生成的，我们不要管他，也不要在它的上面去写代码，除非你看明白了Annie引擎的构造
     var image1 = null;
     var image2 = null;
     var bitmap = null;

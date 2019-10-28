@@ -1,9 +1,14 @@
+/**
+ * annie.Timer
+ * 定时器类
+ */
 AnnieRoot.timerDemo=AnnieRoot.timerDemo||{};
 timerDemo.TimerDemo=function(){
 	var s = this;
 	annie.Sprite.call(s);
 	/*_a2x_need_start*/s.actionBtn=null;s.nowNum=null;s.replayBtn=null;s.stopBtn=null;/*_a2x_need_end*/
 	annie.initRes(s,"timerDemo","TimerDemo");
+	//上面的代码Annie2x工具自动生成的，我们不要管他，也不要在它的上面去写代码，除非你看明白了Annie引擎的构造
 	var nowTime = 10;
 	//定义一个timmer类，事件间隔为1秒，一共执行10次
 	var timer=new annie.Timer(1000,10);

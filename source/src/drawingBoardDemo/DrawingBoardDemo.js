@@ -25,16 +25,20 @@ drawingBoardDemo.DrawingBoardDemo=function(){
 	s.canel_btn.mouseChildren=false;
 	s.addEventListener(annie.MouseEvent.CLICK,function (e) {
 		if (e.target.name=="canel_btn"){
-			if (isAllCancel){
-				s.canel_btn.title_txt.text="撤消到第二步";
-				//全部撤消
-				db.reset();
-				isAllCancel=false;
+			if (db.totalStepList.length>0){
+				if (isAllCancel){
+					s.canel_btn.title_txt.text="撤消到第二步";
+					//全部撤消
+					db.reset();
+					isAllCancel=false;
+				}else {
+					//撤回到第二步;
+					s.canel_btn.title_txt.text="全部撤消";
+					db.cancel(2);
+					isAllCancel=true;
+				}
 			}else {
-				//撤回到第二步;
-				s.canel_btn.title_txt.text="全部撤消";
-				db.cancel(2);
-				isAllCancel=true;
+				trace("请在画板作画，才能进行撤消")
 			}
 		}
 	})

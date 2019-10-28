@@ -28,9 +28,9 @@ isLoadedSceneDemo.IsLoadedSceneDemo=function(){
 			//按钮的点击事件
 			//"home"是测试使用的，你可以改成你需要检测的场景名称；
 			if (annie.isLoadedScene('home')){
-				trace("此场景已加载");
+				trace("场景home已加载");
 			}else {
-				trace("此场景未加载");
+				trace("场景home未加载");
 			}
 		}
 	})
