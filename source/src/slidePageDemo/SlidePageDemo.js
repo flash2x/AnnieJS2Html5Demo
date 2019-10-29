@@ -32,7 +32,7 @@ slidePageDemo.SlidePageDemo=function(){
 		sp.canSlideNext=false;
 		sp.canSlidePrev=false;
 		arrow.visible=false;
-		trace("start");
+		console.log("start");
 	});
 	sp.addEventListener(annie.Event.ON_SLIDE_END,function (e) {
 		//这是滑动结束时触发的事件，sp.currentPageIndex为当前显示页面的索引;
@@ -41,7 +41,7 @@ slidePageDemo.SlidePageDemo=function(){
 		}
 		sp.canSlideNext=true;
 		sp.canSlidePrev=true;
-		trace("stop");
+		console.log("stop");
 	});
 };
 A2xExtend(slidePageDemo.SlidePageDemo,annie.Sprite);

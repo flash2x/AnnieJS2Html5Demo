@@ -36,20 +36,20 @@ aObjectDemo.AObjectDemo=function(){
             case 0:
                 var aobj=new annie.AObject();
                 s.msg_txt.text="aobj的instanceType:"+aobj.instanceType;
-                trace(s.msg_txt.text);
+                console.log(s.msg_txt.text);
                 break;
             case 1:
                 var aobj=new annie.AObject();
                 s.msg_txt.text="aobj的instanceId:"+aobj.instanceId;
-                trace(s.msg_txt.text);
+                console.log(s.msg_txt.text);
                 break;
             case 2:
                 s.msg_txt.text="此demo类的InstanceType:"+s.instanceType;
-                trace(s.msg_txt.text);
+                console.log(s.msg_txt.text);
                 break;
             case 3:
                 s.msg_txt.text="此demo类的InstanceId:"+s.instanceId;
-                trace(s.msg_txt.text);
+                console.log(s.msg_txt.text);
                 break;
         }
     })

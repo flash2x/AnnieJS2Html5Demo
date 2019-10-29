@@ -18,7 +18,7 @@ scratchCardDemo.ScratchCardDemo=function(){
 	var sc=new annieUI.ScratchCard(200,200,"#999",annie.Shape.getBitmapStyle(logoImg));
 	sc.addEventListener("onDrawTime",function (e) {
 		//用户刮了的进度，这里是实时侦听。
-		trace("第一张图已经刮了"+e.data.per+"%");
+		console.log("第一张图已经刮了"+e.data.per+"%");
 	});
 	s.addChild(sc);
 	sc.x=220;
@@ -34,7 +34,7 @@ scratchCardDemo.ScratchCardDemo=function(){
 	db2.y = 400;
 	db2.addEventListener("onDrawTime",function (e) {
 		//用户刮了的进度，这里是实时侦听。
-		trace("第二张图已经刮了"+e.data.per+"%");
+		console.log("第二张图已经刮了"+e.data.per+"%");
 	});
 	s.addEventListener(annie.Event.ADD_TO_STAGE,function (e) {
 		//要更换的被刮出来的图片,不赋值的话默认之前设置的；

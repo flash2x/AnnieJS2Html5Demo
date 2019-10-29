@@ -8,7 +8,12 @@ AnnieRoot.spriteDemo = AnnieRoot.spriteDemo || {};
 spriteDemo.SpriteDemo = function () {
     var s = this;
     annie.Sprite.call(s);
-    /*_a2x_need_start*/s.change_btn=null;s.cleanAll_btn=null;s.clean_btn=null;s.click_btn=null;s.testBox=null;/*_a2x_need_end*/
+    /*_a2x_need_start*/
+    s.change_btn = null;
+    s.cleanAll_btn = null;
+    s.clean_btn = null;
+    s.click_btn = null;
+    s.testBox = null;/*_a2x_need_end*/
     annie.initRes(s, "spriteDemo", "SpriteDemo");
     //上面的代码Annie2x工具自动生成的，我们不要管他，也不要在它的上面去写代码，除非你看明白了Annie引擎的构造
     var image1 = null;
@@ -26,17 +31,21 @@ spriteDemo.SpriteDemo = function () {
         if (!image2) {
             image2 = new Image();
             image2.src = "resource/logo.png";
-            bitmap = new annie.Bitmap(image2);
-            s.testBox.addChild(bitmap);
+            image2.onload = function (e) {
+                bitmap = new annie.Bitmap(image2);
+                s.testBox.addChild(bitmap);
+            }
         } else {
             s.testBox.addChild(bitmap);
         }
         if (!image1) {
             image1 = new Image();
             image1.src = "resource/logo.png";
-            bitmap1 = new annie.Bitmap(image1);
-            bitmap1.x = 100;
-            s.testBox.addChildAt(bitmap1, 0);
+            image1.onload = function (e) {
+                bitmap1 = new annie.Bitmap(image1);
+                bitmap1.x = 100;
+                s.testBox.addChildAt(bitmap1, 0);
+            }
         } else {
             s.testBox.addChildAt(bitmap1, 0);
         }
@@ -48,7 +57,7 @@ spriteDemo.SpriteDemo = function () {
     })
 
     s.change_btn.addEventListener(annie.MouseEvent.CLICK, function (e) {
-        s.testBox.swapChild(bitmap,bitmap1)
+        s.testBox.swapChild(bitmap, bitmap1)
     })
 
     s.cleanAll_btn.addEventListener(annie.MouseEvent.CLICK, function (e) {

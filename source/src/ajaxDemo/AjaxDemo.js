@@ -32,7 +32,7 @@ ajaxDemo.AjaxDemo=function(){
 			// 		}
 			// 	},
 			// 	error: function (result) {
-			// 		trace(result)
+			// 		console.log(result)
 			// 	},//TODO  （这里TODO起强调作用）这里是后台数据返回错误信息的地方；
 			// });
 
@@ -48,7 +48,7 @@ ajaxDemo.AjaxDemo=function(){
 			    responseType: 'json',//TODO  （这里TODO起强调作用）这个参数是接收到后端传过来的数据时，解析的方式：text/json,一般不写这个话，默认的是：text
 			    success: function (result) {
 			    	//这里成功回调；
-			        trace(result)
+			        console.log(result)
 					var resultData=result.data.response;
 			        if (resultData.status == 0) {//TODO  （这里TODO起强调作用）这里就是你处理后台数据的地方了
 			            sameFn(resultData);
@@ -58,7 +58,7 @@ ajaxDemo.AjaxDemo=function(){
 			    },
 			    error: function (result) {
 					//TODO  （这里TODO起强调作用）这里是后台数据返回错误信息的地方；
-			        trace(result)
+			        console.log(result)
 			    },
 			});
 		}

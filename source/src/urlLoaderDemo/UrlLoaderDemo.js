@@ -21,7 +21,7 @@ urlLoaderDemo.UrlLoaderDemo=function(){
 		alert(e.data.msg);
 	});
 	loader.addEventListener(annie.Event.COMPLETE,function (e) {
-		trace(e.data.response);
+		console.log(e.data.response);
 		switch(e.data.type){
 			case "js":
 				//加载完自己运行,无需处理

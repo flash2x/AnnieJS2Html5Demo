@@ -25,7 +25,7 @@ osTypeDemo.OsTypeDemo = function () {
     s.addEventListener(annie.MouseEvent.CLICK, function (e) {
         if (e.target.id == 0) {
             //按钮的点击事件
-            trace(annie.osType)
+            console.log(annie.osType)
         }
     })
 };

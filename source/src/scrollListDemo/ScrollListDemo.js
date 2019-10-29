@@ -18,21 +18,21 @@ scrollListDemo.ScrollListDemo=function(){
 	//开始如果有数据可以先更新一批数据到页面上
 	sl.updateData(s.getData());
 	sl.addEventListener(annie.Event.ON_SCROLL_TO_END,function (e) {
-		trace("end");
+		console.log("end");
 		//读取数据，这里可以向后台请求数据。我这里只是模拟
 		sl.updateData(s.getData());
 	});
 	sl.addEventListener(annie.Event.ON_SCROLL_START,function (e) {
 		//滑动开始时，触发这个时间
-		trace("start");
+		console.log("start");
 	});
 	sl.addEventListener(annie.Event.ON_SCROLL_STOP,function (e) {
 		//滑动停止时，触发此事件
-		trace("stop");
+		console.log("stop");
 	});
 	sl.addEventListener(annie.Event.ON_SCROLL_TO_HEAD,function (e) {
 		//滑动到顶部时，触发的事件
-		trace("head");
+		console.log("head");
 	});
 
 };

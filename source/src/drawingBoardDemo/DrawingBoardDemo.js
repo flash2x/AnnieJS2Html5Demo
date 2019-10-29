@@ -38,7 +38,7 @@ drawingBoardDemo.DrawingBoardDemo=function(){
 					isAllCancel=true;
 				}
 			}else {
-				trace("请在画板作画，才能进行撤消")
+				console.log("请在画板作画，才能进行撤消")
 			}
 		}
 	})
