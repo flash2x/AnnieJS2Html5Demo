@@ -22,7 +22,7 @@ window.addEventListener("load", function () {
         //想要同时加载多个场景的话，Annie2x.loadScene的第一个参数可以传数组如 ["scene1","scene2",...]
         annie.loadScene(["loading", "home"], function (per) {
             //加载进度
-            trace("加载进度:" + per + "%");
+            console.log("加载进度:" + per + "%");
         }, function (result) {
             //加载完成 result 里包含了当前加载完成的是哪个场景序号，以及总加载场景数有多少，所以
             //需要同时加载多个模块时可以判断已经加载好的后直接出内容，其他偷偷在后台加载

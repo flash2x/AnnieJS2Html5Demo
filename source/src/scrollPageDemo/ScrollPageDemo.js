@@ -30,20 +30,20 @@ scrollPageDemo.ScrollPageDemo=function(){
 	sp.scrollTo(20);
 	sp.addEventListener(annie.Event.ON_SCROLL_START,function (e) {
 		//滑动的开始事件
-		trace(e.type);
+		console.log(e.type);
 	});
 	sp.addEventListener(annie.Event.ON_SCROLL_STOP,function (e) {
 		//滑动停止事件
-		trace(e.type);
+		console.log(e.type);
 
 	});
 	sp.addEventListener(annie.Event.ON_SCROLL_TO_HEAD,function (e) {
 		//滑动到顶部的事件
-		trace(e.type);
+		console.log(e.type);
 	});
 	sp.addEventListener(annie.Event.ON_SCROLL_TO_END,function (e) {
 		//滑到底部的事件
-		trace(e.type);
+		console.log(e.type);
 	});
 };
 A2xExtend(scrollPageDemo.ScrollPageDemo,annie.Sprite);

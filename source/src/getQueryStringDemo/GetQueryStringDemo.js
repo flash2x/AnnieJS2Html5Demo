@@ -29,9 +29,9 @@ getQueryStringDemo.GetQueryStringDemo=function(){
 			//下面的Demo是代表参数的变量，通过获取参数的变量来获取你要的参数；
 			var demoParam=annie.getQueryString("demo");
 			if (!demoParam){
-				trace("请在地址栏上加一个“demo”参数")
+				console.log("请在地址栏上加一个“demo”参数")
 			}else {
-				trace(demoParam)
+				console.log(demoParam)
 			}
 		}
 	})

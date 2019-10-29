@@ -27,7 +27,7 @@ sendToURLDemo.SendToURLDemo=function(){
 		if (e.target.id == 0) {
 			//sendToURL 使用用途在统计和“心跳”，什么是‘心跳’？‘心跳’是为了检测此项目是否在运行中。
 			annie.sendToURL("http://www.annie2x.com??key1=value&key2=value");
-			trace("数据已发送，请在调试器中查看具体发送数据")
+			console.log("数据已发送，请在调试器中查看具体发送数据")
 		}
 	})
 };

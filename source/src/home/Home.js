@@ -6,7 +6,7 @@ home.Home=function(){
 	annie.initRes(s,"home","Home");
 	//声明好类菜单列表，其实可以配置一个json文件动态去加载以方便更新及调整。这里为了简便直接写到了这里
     s.classList = [];
-    s.classList.push({name: "annie.Trace", scene: "traceDemo",classObj:"traceDemo.TraceDemo",title:"调试打印",isMake:true});
+    s.classList.push({name: "annie.trace", scene: "traceDemo",classObj:"traceDemo.TraceDemo",title:"调试打印",isMake:true});
     s.classList.push({name: "annie.AObject", scene: "aObjectDemo",classObj:"aObjectDemo.AObjectDemo",title:"annie.AObject基类",isMake:true});
     s.classList.push({name: "annie.DisplayObject", scene: "displayObjectDemo",classObj:"displayObjectDemo.DisplayObjectDemo",title:"显示对象基类",isMake:true});
     s.classList.push({name: "annie.Bitmap", scene: "bitmapDemo",classObj:"bitmapDemo.BitmapDemo",title:"图形显示对象",isMake:true});
